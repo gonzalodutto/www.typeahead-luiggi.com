@@ -4,6 +4,10 @@
   box-sizing: inherit;
 }
 
+*:focus {
+  outline: none;
+}
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -18,4 +22,28 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+}
+
+li {
+  list-style-type: "";
+}
+
+.form-control {
+  border: none;
+  margin: 1rem;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  font-family: inherit;
+  text-align: center;
+  width: 30rem;
+  border-radius: 10rem;
+  margin-right: 1rem;
+  color: inherit;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+  box-shadow: 0 30px 80px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  text-align: center;
 }
