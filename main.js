@@ -27,12 +27,11 @@ function displayMatches() {
             <span class="name">
               <b>${producto.content.$t.split(" > ")[0]}</b> 
                 - ${producto.content.$t.split(" > ")[1]} -
-              <b> $ ${
-                producto.content.$t.split(" > ")[2].split(",")[0]
-              },${producto.content.$t
-        .split(" > ")[2]
-        .split(",")[1]
-        .slice(0, 2)}</b>
+              <b> $ ${Intl.NumberFormat("de-DE").format(
+                Number(
+                  producto.content.$t.split(" > ")[2].replace(",", ".")
+                ).toFixed(2)
+              )}</b>
             </span>
         </li>
       `;
