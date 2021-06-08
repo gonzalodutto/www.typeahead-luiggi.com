@@ -9,7 +9,6 @@ const productosDetalle = [];
 fetch(endpoint)
   .then((res) => res.json())
   .then((data) => productos.push(...data.feed.entry));
-// .then((data) => (console.log(data.feed.entry)));
 
 function findMatches(wordToMatch, productos) {
   return productos.filter((producto) => {
@@ -24,7 +23,11 @@ function displayMatches() {
     .map((producto) => {
       return `
         <li>
-            <span class="name">${producto.content.$t}</span>
+            <span class="name">
+              <b>${producto.content.$t.split(" > ")[0]}</b> 
+               - ${producto.content.$t.split(" > ")[1]} -
+              <b> $ ${producto.content.$t.split(" > ")[2]}</b>
+            </span>
         </li>
       `;
     })
