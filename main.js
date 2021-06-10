@@ -1,9 +1,7 @@
 "use strict";
 
 const endpoint =
-  "https://spreadsheets.google.com/feeds/cells/1IHYqDTik3RRIDZH2N5v1Kq1GcIvpVvIjGrBFk9Eg9P8/15/public/full?alt=json"; // Json Hoja de calculos general ferrreteria.
-// const endpoint =
-//   "https://spreadsheets.google.com/feeds/cells/1URGwdSagiUivMfv4SkdBp9zb5HiVjTHBQzTicKiwSiQ/1/public/full?alt=json"; // Json hoja de calcula precios solos.
+  "https://spreadsheets.google.com/feeds/cells/1IHYqDTik3RRIDZH2N5v1Kq1GcIvpVvIjGrBFk9Eg9P8/15/public/full?alt=json";
 
 const productos = [];
 
@@ -25,7 +23,7 @@ function displayMatches() {
       return `
         <li>
             <span class="name">
-              <b>${producto.content.$t.split(" > ")[0]}</b> 
+              <b>${producto.content.$t.split(" > ")[0].padEnd(7, " ")}</b> 
                 - ${producto.content.$t.split(" > ")[1]} -
               <b> $ ${Intl.NumberFormat("de-DE").format(
                 Number(
