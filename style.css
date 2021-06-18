@@ -42,14 +42,14 @@ body {
 
 .form-control {
   border: none;
-  margin: 2rem;
-  padding: 0.5rem 2rem;
-  font-size: 1rem;
+  margin: 30px;
+  padding: 7px 30px;
+  font-size: 15px;
   font-family: inherit;
   text-align: center;
-  width: 30rem;
-  border-radius: 10rem;
-  margin-right: 1rem;
+  width: 600px;
+  border-radius: 20px;
+  /* margin-right: 1rem; */
   color: inherit;
   border: 1px solid #fff;
   transition: all 0.3s;
@@ -170,5 +170,9 @@ body a {
     width: 100%;
     display: block;
     text-align: center;
+  }
+
+  .form-control {
+    width: 300px;
   }
 }
