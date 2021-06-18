@@ -16,30 +16,105 @@
     />
   </head>
   <body>
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-md-6 m-auto">
-          <!-- <h3 class="text-center mb-3">
-            <i class="fas fa-flag-usa"></i> Productos:
-          </h3> -->
-          <div class="form-group">
-            <input
-              type="text"
-              id="search"
-              autofocus="autofocus"
-              class="form-control form-control-lg"
-              placeholder="Escriba nombre del producto aquí..."
-            />
-            <ul class="suggestions">
-              <li>Filter for a city</li>
-              <li>Or State</li>
-            </ul>
-          </div>
-          <div id="match-list"></div>
-        </div>
-      </div>
+    <td class="title">
+      <img
+        src="./images/logo.png"
+        alt="Company logo"
+        style="width: 100%; max-width: 100px"
+      />
+    </td>
+    <div class="invoice-box">
+      <table>
+        <tr class="top">
+          <td colspan="3">
+            <table>
+              <tr>
+                <td></td>
+                <td class="title">
+                  <!-- <img
+                    src="./images/logo.png"
+                    alt="Company logo"
+                    style="width: 100%; max-width: 100px"
+                  /> -->
+                </td>
+
+                <td>
+                  Invoice #: 123<br />
+                  Fecha: 05/10/2021
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr class="heading">
+          <td>Código</td>
+          <td>Descripción</td>
+          <td>Precio</td>
+        </tr>
+
+        <tr class="item">
+          <td>1526</td>
+          <td>Website design</td>
+          <td>$300.00</td>
+        </tr>
+
+        <tr class="item">
+          <td>13</td>
+          <td>Hosting (3 months)</td>
+          <td>$75.00</td>
+        </tr>
+
+        <tr class="item last">
+          <td>6565</td>
+          <td>Domain name (1 year)</td>
+          <td>$10.00</td>
+        </tr>
+
+        <tr class="total">
+          <td></td>
+          <td></td>
+          <td>Total: $385.00</td>
+        </tr>
+      </table>
     </div>
 
+    <main class="app">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6 m-auto">
+            <div class="form-group">
+              <input
+                type="text"
+                id="search"
+                autofocus="autofocus"
+                class="form-control form-control-lg"
+                placeholder="Escriba nombre del producto aquí..."
+              />
+              <ul class="suggestions">
+                <li>Filter for a city</li>
+                <li>Or State</li>
+                <li>Filter for a city</li>
+                <li>Or State</li>
+                <li>Filter for a city</li>
+                <li>Or State</li>
+                <li>Filter for a city</li>
+                <li>Or State</li>
+                <li>Filter for a city</li>
+                <li>Or State</li>
+                <li>Filter for a city</li>
+                <li>Or State</li>
+                <li>Filter for a city</li>
+                <li>Or State</li>
+                <li>Filter for a city</li>
+                <li>Or State</li>
+              </ul>
+            </div>
+            <div id="match-list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="main.js"></script>
   </body>
 </html>
