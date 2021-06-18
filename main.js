@@ -52,4 +52,4 @@ const month = `${now.getMonth() + 1}`.padStart(2, 0);
 const year = now.getFullYear();
 const hour = now.getHours();
 const min = now.getMinutes();
-labelDate.textContent = `${day}/${month}/${year}`;
+// labelDate.textContent = `${day}/${month}/${year}`;

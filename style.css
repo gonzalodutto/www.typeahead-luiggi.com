@@ -70,7 +70,7 @@ body {
   font-family: "Poppins", sans-serif;
   text-align: center;
   color: rgb(31, 31, 31);
-  background: linear-gradient(to bottom right, #67b26f, #4ca2cd);
+  background: #f3f3f3;
 }
 
 body h1 {
@@ -173,6 +173,6 @@ body a {
   }
 
   .form-control {
-    width: 300px;
+    width: 270px;
   }
 }
