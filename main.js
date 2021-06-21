@@ -1,18 +1,46 @@
 "use strict";
 
+/////////////////////////////////////////////////
+// Data json
 const endpoint =
   "https://spreadsheets.google.com/feeds/cells/1IHYqDTik3RRIDZH2N5v1Kq1GcIvpVvIjGrBFk9Eg9P8/15/public/full?alt=json";
-
-const productos = [];
-
-/////////////////////////////////////////////////
-// Elements
-const labelDate = document.querySelector(".date");
 
 fetch(endpoint)
   .then((res) => res.json())
   .then((data) => productos.push(...data.feed.entry));
 
+const productos = [];
+
+/////////////////////////////////////////////////
+// Elements
+const searchInput = document.getElementById("search");
+const suggestions = document.querySelector(".suggestions");
+const labelDate = document.querySelector(".date");
+
+/////////////////////////////////////////////////
+// Date format
+const now = new Date();
+const options = {
+  hour: "numeric",
+  minute: "numeric",
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  weekday: "long",
+};
+const locale = navigator.language;
+
+labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(now);
+// const now = new Date();
+// const day = `${now.getDate()}`.padStart(2, 0);
+// const month = `${now.getMonth() + 1}`.padStart(2, 0);
+// const year = now.getFullYear();
+// const hour = `${now.getHours()}`.padStart(2, 0);
+// const min = `${now.getMinutes()}`.padStart(2, 0);
+// labelDate.textContent = `${day}/${month}/${year} ${hour}:${min}`;
+
+/////////////////////////////////////////////////
+// Functions
 function findMatches(wordToMatch, productos) {
   return productos.filter((producto) => {
     const regex = new RegExp(wordToMatch, "gi");
@@ -39,17 +67,5 @@ function displayMatches() {
   suggestions.innerHTML = html;
 }
 
-const searchInput = document.getElementById("search");
-const suggestions = document.querySelector(".suggestions");
-
 searchInput.addEventListener("change", displayMatches);
 searchInput.addEventListener("keyup", displayMatches);
-
-// Date format
-const now = new Date();
-const day = `${now.getDate()}`.padStart(2, 0);
-const month = `${now.getMonth() + 1}`.padStart(2, 0);
-const year = now.getFullYear();
-const hour = now.getHours();
-const min = now.getMinutes();
-// labelDate.textContent = `${day}/${month}/${year}`;
