@@ -3,7 +3,7 @@
 /////////////////////////////////////////////////
 // Data json
 const endpoint =
-  "https://spreadsheets.google.com/feeds/cells/1IHYqDTik3RRIDZH2N5v1Kq1GcIvpVvIjGrBFk9Eg9P8/15/public/full?alt=json";
+  "https://sheetdb.io/api/v1/zycqsa78bnwvh";
 
 fetch(endpoint)
   .then((res) => res.json())
